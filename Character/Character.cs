@@ -86,6 +86,132 @@ namespace Character
         public Savings SavingThrows { get; set; }
         public Class CharacterClass { get; set; }
 
+
+        /*
+        My Implimentaion
+
+        private void LoadCharacter()
+        {
+            Character character = new Character();
+            tbx_xp.Text = character.Xp.ToString();
+            tbx_lvl.Text = character.Level.ToString();
+            tbx_charName.Text = character.CharName.ToString();
+            tbx_class.Text = character.CharacterClass.ToString();
+            tbx_inspiration.Text = character.Inspiration.ToString();
+            tbx_passive.Text = character.PassivWis.ToString();
+            tbx_proficency.Text = character.ProfBonus.ToString();
+            tbx_statStr.Text = character.StatStr.ToString();
+            tbx_statDex.Text = character.StatDex.ToString();
+            tbx_statCon.Text = character.StatCon.ToString();
+            tbx_statInt.Text = character.StatInt.ToString();
+            tbx_statWis.Text = character.StatWis.ToString();
+            tbx_statCha.Text = character.StatCha.ToString();
+            tbx_statStrBonus.Text = character.StatStrBonus.ToString();
+            tbx_statDexBonus.Text = character.StatDexBonus.ToString();
+            tbx_statConBonus.Text = character.StatConBonus.ToString();
+            tbx_statIntBonus.Text = character.StatIntBonus.ToString();
+            tbx_statWisBonus.Text = character.StatWisBonus.ToString();
+            tbx_statChaBonus.Text = character.StatChaBonus.ToString();
+            tbx_class.Text = character.CharacterClass.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Strength))
+                tbx_saveStr.Text = (character.StatStrBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveStr.Text = character.StatStrBonus.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Dexterity))
+                tbx_saveDex.Text = (character.StatDexBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveDex.Text = character.StatDexBonus.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Constitution))
+                tbx_saveCon.Text = (character.StatConBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveCon.Text = character.StatConBonus.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Intelligence))
+                tbx_saveInt.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveInt.Text = character.StatIntBonus.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Wisdom))
+                tbx_saveWis.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveWis.Text = character.StatWisBonus.ToString();
+            if (character.SavingThrows.HasFlag(Character.Savings.Charisma))
+                tbx_saveCha.Text = (character.StatChaBonus + character.ProfBonus).ToString();
+            else
+                tbx_saveCha.Text = character.StatChaBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillAcrobatics.Text = (character.StatDexBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillAcrobatics.Text = character.StatDexBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillAnimal.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillAnimal.Text = character.StatWisBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillArca.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillArca.Text = character.StatIntBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillAthle.Text = (character.StatStrBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillAthle.Text = character.StatStrBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillDecep.Text = (character.StatChaBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillDecep.Text = character.StatChaBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillHis.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillHis.Text = character.StatIntBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillIns.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillIns.Text = character.StatWisBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillIntimi.Text = (character.StatChaBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillIntimi.Text = character.StatChaBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillInves.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillInves.Text = character.StatIntBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillMedi.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillMedi.Text = character.StatWisBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillNatu.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillNatu.Text = character.StatIntBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillPerc.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillPerc.Text = character.StatWisBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillPerfo.Text = (character.StatChaBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillPerfo.Text = character.StatChaBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillPersu.Text = (character.StatChaBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillPersu.Text = character.StatChaBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillReli.Text = (character.StatIntBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillReli.Text = character.StatIntBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillSleight.Text = (character.StatDexBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillSleight.Text = character.StatDexBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillStealth.Text = (character.StatDexBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillStealth.Text = character.StatDexBonus.ToString();
+            if (character.Skills.HasFlag(Character.SkillProfs.Acrobatics))
+                tbx_skillSurvi.Text = (character.StatWisBonus + character.ProfBonus).ToString();
+            else
+                tbx_skillSurvi.Text = character.StatWisBonus.ToString();
+        }
+
+         */
     }
 
 }
