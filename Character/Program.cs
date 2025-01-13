@@ -5,7 +5,6 @@
         static void Main(string[] args)
         {
             Character character = new Character();
-            Console.WriteLine(character.skills);
         }
     }
 }

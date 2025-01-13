@@ -25,12 +25,12 @@ namespace Character
         }
         [Flags]public enum Savings : uint // Saving Throws
         {
-            Str = 1,
-            Dex = 2,
-            Con = 4,
-            Int = 8,
-            Wis = 16,
-            Cha = 32
+            Strength = 1,
+            Dexterity = 2,
+            Constitution = 4,
+            Intelligence = 8,
+            Wisdom = 16,
+            Charisma = 32
         }
         [Flags]public enum SkillProfs: uint
         {
@@ -78,7 +78,6 @@ namespace Character
         public int Inspiration { get; set; }
         public SkillProfs Skills { get; set; }
         public Savings SavingThrows { get; set; }
-
 
     }
 
