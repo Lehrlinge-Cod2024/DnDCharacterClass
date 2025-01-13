@@ -59,6 +59,12 @@ namespace Character
         public int StatInt { get; set; }
         public int StatWis { get; set; }
         public int StatCha { get; set; }
+        public int StatStrBonus { get; set; }
+        public int StatDexBonus { get; set; }
+        public int StatConBonus { get; set; }
+        public int StatIntBonus { get; set; }
+        public int StatWisBonus { get; set; }
+        public int StatChaBonus { get; set; }
         public int ProfBonus { get; set; }
         public int Level { get; set; }
         public int Xp { get; set; }
@@ -78,6 +84,7 @@ namespace Character
         public int Inspiration { get; set; }
         public SkillProfs Skills { get; set; }
         public Savings SavingThrows { get; set; }
+        public Class CharacterClass { get; set; }
 
     }
 
